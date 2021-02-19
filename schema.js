@@ -6,9 +6,18 @@ const schema = buildSchema(`
         firstName: String
         lastName: String
         gender: String
+        age: Int
+        IsFriend: Boolean
+        stock: [Stock]
         email: String
     }
 
+    type Stock {
+        id: ID
+        price: Float
+        closingPrice: Float
+        name: String
+    }
     type Query {
         getFriend(id : ID) : Friend
     }
@@ -18,6 +27,9 @@ const schema = buildSchema(`
         firstName: String
         lastName: String
         gender: String
+        age: Int
+        IsFriend: Boolean
+        stock: [Stock]
         email: String
     }
 
