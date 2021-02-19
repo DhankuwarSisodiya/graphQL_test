@@ -13,7 +13,10 @@ const root = { friend: () => {
         "firstName": "Shefali",
         "lastName": "Vaidya",
         "gender": "Female",
-        "email": "shef.vaid@gmail.com"
+        "email": [
+            {email: "shef.vaid@gmail.com"},
+            {email: "shef.vaid95@gmail.com"}
+        ]
     }
 }}
 app.use('/graphql', graphqlHTTP ({
