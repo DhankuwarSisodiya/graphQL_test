@@ -8,12 +8,12 @@ export const resolvers = {
     Mutation:{
         createFriend: (root, {input}) => {
             const newFriend = new Friend ({
-            firstName = input.firstName,
-            lastName = input.lastName,
-            gender = input.gender,
-            age = input.age,
-            email = input.email,
-            contacts = input.contacts
+            firstName : input.firstName,
+            lastName : input.lastName,
+            gender : input.gender,
+            age : input.age,
+            email : input.email,
+            contacts : input.contacts
         })
         newFriend.id = newFriend._id;
         return new Promise((resolve, object) => {

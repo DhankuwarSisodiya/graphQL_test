@@ -38,7 +38,7 @@ const sequelize = new Sequelize('database', null, null, {
 
 })
 
-const Aliens = Sequelize.define('aliens',{
+const Aliens = sequelize.define('aliens',{
     firstName: {
         type: Sequelize.STRING
     },
