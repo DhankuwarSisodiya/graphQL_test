@@ -1,4 +1,4 @@
-import {Friends} from './dbConnectors'
+import {Friends, Aliens} from './dbConnectors'
 export const resolvers = {
     Query :{
         getFriend: ({id}) => {
@@ -11,6 +11,7 @@ export const resolvers = {
             firstName = input.firstName,
             lastName = input.lastName,
             gender = input.gender,
+            age = input.age,
             email = input.email,
             contacts = input.contacts
         })
