@@ -16,7 +16,7 @@ const typeDefs = `
         id: ID
         firstName: String
         lastName: String
-        planetName: String
+        planet: String
     }
 
     type Contact{
@@ -54,4 +54,4 @@ const typeDefs = `
     `;
 
 const schema = makeExecutableSchema({typeDefs, resolvers});
-export default {schema};
+export {schema};
