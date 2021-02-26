@@ -34,7 +34,7 @@ const friendSchema = new mongoose.Schema({
     }
 });
 
-const Friends = mongoose.model('friends', friendSchema);
+const Friend = mongoose.model('friends', friendSchema);
 
 // SQL
 const sequelize = new Sequelize('database', null, null, {
@@ -59,4 +59,4 @@ Aliens.sync({ force: true }).then(() => {
 });
 
 
-export { Friends, Aliens };
+export { Friend, Aliens };
