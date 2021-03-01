@@ -34,6 +34,7 @@ const typeDefs = `
     }
 
     input FriendInput {
+        id: ID
         firstName: String
         lastName: String
         gender: Gender
