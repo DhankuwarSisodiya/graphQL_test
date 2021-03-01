@@ -2,9 +2,18 @@ import {Friend, Aliens} from './dbConnectors'
 import { NoDeprecatedCustomRule } from 'graphql';
 export const resolvers = {
     Query :{
-        getFriend: ({id}) => {
-            return new Friend(id, friendDatabase[id]);
+        getOneFriend: (root, {id}) => {
+            return new Promise((resolve, object) => {
+                Friend.findById(id, (err, friend) => {
+                    if(err)
+                    reject(err);
+                 else resolve(friend)
+                })
+            })
         },
+        getAliens: () => {
+            return Aliens.findAll()
+        }
     },
     Mutation:{
         createFriend: (root, {input}) => {
